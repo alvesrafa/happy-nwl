@@ -39,7 +39,7 @@ const OrphanagesMap = () => {
 
       <MapComponent darkTheme={mapTheme} />
 
-      <Link to="/">
+      <Link to="/orphanages/create">
         <FiPlus size={32} color="#FFF" />
       </Link>
     </Container>

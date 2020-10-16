@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
+import Leaflet from 'leaflet';
+import { Map, TileLayer, Marker } from 'react-leaflet';
+import { Link } from 'react-router-dom';
 
-import { Map, TileLayer } from 'react-leaflet';
+import { FiArrowRight } from 'react-icons/fi';
 
+import marker from '../../assets/images/marker.svg';
 import 'leaflet/dist/leaflet.css';
+
+import { PopUp } from './styles';
 
 interface MapProps {
   darkTheme: boolean;
 }
 
+const mapIcon = Leaflet.icon({
+  iconUrl: marker,
+  iconSize: [58, 68],
+  iconAnchor: [29, 68],
+
+  popupAnchor: [170, 2],
+});
 const MapComponent = (props: MapProps) => {
   const { darkTheme } = props;
   return (
@@ -28,6 +41,14 @@ const MapComponent = (props: MapProps) => {
           process.env.REACT_APP_MAPBOX_TOKEN
         }`}
       />
+      <Marker icon={mapIcon} position={[-23.8069824, -45.3649479]}>
+        <PopUp closeButton={false} minWidth={240} maxWidth={240}>
+          Nome do orfanato
+          <Link to="/orphanages/1">
+            <FiArrowRight size={20} color="#FFF" />
+          </Link>
+        </PopUp>
+      </Marker>
     </Map>
   );
 };

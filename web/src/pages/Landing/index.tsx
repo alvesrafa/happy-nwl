@@ -17,7 +17,7 @@ const Landing = () => {
         </main>
         <div className="location">
           <strong>Ilhabela</strong>
-          <span>Santa Catarina</span>
+          <span>São Paulo</span>
         </div>
         <Link to="map" className="enter-app">
           <FiArrowRight size={26} color="rgba(0,0,0,0.6)" />
