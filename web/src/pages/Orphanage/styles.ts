@@ -3,43 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   min-height: 100vh;
-  > aside {
-    position: fixed;
-    height: 100%;
-    padding: 32px 24px;
-    background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    > img {
-      width: 48px;
-    }
-    > footer a,
-    button {
-      width: 48px;
-      height: 48px;
-
-      border: 0;
-
-      background: #12afcb;
-      border-radius: 16px;
-
-      cursor: pointer;
-
-      transition: background-color 0.2s;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        background: #17d6eb;
-      }
-    }
-  }
   > main {
     flex: 1;
   }
@@ -95,7 +58,7 @@ export const Details = styled.div`
       line-height: 54px;
       margin-bottom: 8px;
     }
-    > button .contact-button {
+    button.contact-button {
       margin-top: 64px;
 
       width: 100%;
@@ -142,6 +105,11 @@ export const Details = styled.div`
           background: linear-gradient(154.16deg, #edfff6 7.85%, #ffffff 91.03%);
           border: 1px solid #a1e9c5;
           color: #37c77f;
+        }
+        &.dont-open {
+          background: linear-gradient(154.16deg, #fdf0f5 7.85%, #ffffff 91.03%);
+          border: 1px solid #ffbcd4;
+          color: #ff669d;
         }
       }
     }

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Popup as Pop } from 'react-leaflet';
 
-export const PopUp = styled(Pop)`
+export const Popup = styled(Pop)`
   .leaflet-popup-content-wrapper {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
