@@ -15,7 +15,6 @@ export default {
       opening_hours,
       open_on_weekends,
     } = request.body;
-
     const requestFiles = request.files as Express.Multer.File[];
     const images = requestFiles.map((image) => {
       return {
@@ -31,9 +30,10 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends,
+      open_on_weekends: open_on_weekends === 'true' ? true : false,
       images,
     };
+    console.log('DATA', data);
     const schema = validate.validatePostOrphanage;
 
     await schema.validate(data, { abortEarly: false });
